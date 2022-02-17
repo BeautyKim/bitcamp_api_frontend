@@ -1,15 +1,17 @@
 import React from "react";
-const Login = () => {
-    return <> <h1>로그인폼</h1>
+import Layout from "../containers/Layout";
+
+export default function Login(){
+    return (<Layout><h1>로그인폼</h1>
     <form>
     <div>
     </div>
     <div>
         <label htmlFor=""><b>Username</b></label>
-        <input type="text" /><br/>
+        <input type="text" placeholder="아이디" maxlength ="10" /><br/>
 
         <label htmlFor=""><b>Password</b></label>
-        <input type="text" /><br/>
+        <input type="password" placeholder="비밀번호" maxlength="8"/><br/>
 
         <button>Login</button><button>Cancel</button>
         
@@ -19,7 +21,6 @@ const Login = () => {
     <span><a></a></span>
     </div>
     </form>
-    </>
+    </Layout>)
     
 }
-export default Login;

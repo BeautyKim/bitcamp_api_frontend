@@ -1,6 +1,8 @@
 import React from "react";
-const Google = ()=>{
-    return <> <h1>검색</h1>
+import Layout from "../containers/Layout";
+
+export default function Google(){
+    return (<Layout><h1>검색</h1>
     <form>
     <div>
     </div>
@@ -16,8 +18,7 @@ const Google = ()=>{
     <span><a></a></span>
     </div>
     </form>
-    </>
+    </Layout>)
     
 }
-export default Google; 
 
