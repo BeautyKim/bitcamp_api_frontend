@@ -1,7 +1,8 @@
-import React from "react";
+import React, {useState} from "react";
 import Layout from "../containers/Layout";
 
 export default function Google(){
+    const[search, setSearch]=useState()
     return (<Layout><h1>검색</h1>
     <form>
     <div>

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export default function Navbar(){
+
     return(<div>
     <nav>
     <Ul>
@@ -12,6 +13,7 @@ export default function Navbar(){
         <Li><Link to="/google">Google</Link></Li>
         <Li><Link to="/grade">Grade</Link></Li>
         <Li><Link to="/login">Login</Link></Li>
+        <Li><Link to="/counter">Counter</Link></Li>
      </Ul>
     </nav>
   </div>)
@@ -23,7 +25,6 @@ const Ul = styled.ul`
 `
 
 const Li = styled.li`
-  float: left;
   margin-left: 1em;
   font-size: 20px;
   text-align: center;

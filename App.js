@@ -6,6 +6,8 @@ import Calc from './components/Calc'
 import Google from './components/Google'
 import Login from './components/Login'
 import Grade from './components/Grade'
+import Counter from './components/Counter'
+
 
    export default function App(){
      return useRoutes([
@@ -14,6 +16,7 @@ import Grade from './components/Grade'
        {path: "calc", element: <Calc/>},
        {path: "grade", element: <Grade/>},
        {path: "google", element: <Google/>},
-       {path: "login", element: <Login/>}
+       {path: "login", element: <Login/>},
+       {path: "counter", element: <Counter/>}
      ]);
 }
