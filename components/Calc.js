@@ -1,8 +1,10 @@
 import React, {useState} from "react";
 import Layout from "../containers/Layout";
 export default function Calc(){
-    const[num1, setNum1]=useState(0)
-    const[num2, setNum2]=useState(0)
+    const[inputs, setInputs] = useState({
+        num1 : 0,num2: 0, opcode: ""
+    })
+    
     const[opcode, setOpcode]=useState("")
     const[result, setResult] = useState(0)
     const sum = () => {
@@ -10,8 +12,7 @@ export default function Calc(){
         console.log('숫자1 :' +num1)
         let num2 = document.getElementById('num2').value
         console.log('숫자2 :' +num2)
-        setNum1(num1)
-        setNum2(num2)
+    
         setResult(Number(num1)+Number(num2))
         
     }
