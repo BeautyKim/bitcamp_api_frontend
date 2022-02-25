@@ -21,7 +21,7 @@ export default function Bmi(){
         const handleClick = (e)=>{
             e.preventDefault()
             const bmiRequest = {name, weight, height}
-            memberBmi({name, weight, height}).then( res => {alert(res.data)})
+            memberBmi({name, weight, height}).then( res => setResult(res.data))
             .catch( err => console.log(`에러발생 : ${err}`))
     
         }
