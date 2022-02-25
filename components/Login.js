@@ -2,25 +2,41 @@ import React, {useState} from "react";
 import Layout from "../containers/Layout";
 
 export default function Login(){
-    const[username, setUsername]=useState()
-    const[password, setPassword]=useState()
-    return (<Layout><h1>로그인폼</h1>
+
+    const[inputs, setInputs]=useState({})
+    const[id, pw]=inputs;
+
+    const handleChange = e => {
+        e.prevenDefault()
+        const{value, name} = e.target
+        setInputs({
+            ...inputs, [name] : value
+        })
+    }
+
+    const handleClick = e => {
+        e.prevenDefault()
+        const loginRequest = {id, pw}
+        alert(`로그인 : ${JSON.stringify(loginRequest)}`)
+    }
+
+
+
+
+
+    return (<Layout>
     <form>
-    <div>
-    </div>
+    <h1>로그인폼</h1>
+   
     <div>
         <label htmlFor=""><b>Username</b></label>
-        <input type="text" placeholder="아이디" maxlength ="10" /><br/>
+        <input type="text" name="id" onChange={handleChange} placeholder="아이디" maxlength ="10" /><br/>
 
         <label htmlFor=""><b>Password</b></label>
-        <input type="password" placeholder="비밀번호" maxlength="8"/><br/>
+        <input type="password" name="pw" onChange={handleChange} placeholder="비밀번호" maxlength="8"/><br/>
 
-        <button>Login</button><button>Cancel</button>
+        <button onClick={handleClick}>Login</button><button>Cancel</button>
         
-    </div>
-
-    <div>
-    <span><a></a></span>
     </div>
     </form>
     </Layout>)
